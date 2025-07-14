@@ -1,0 +1,13 @@
+<h2>Enter Marks</h2>
+<form method="POST">
+  <select name="student_id" required>
+    {% for student in students %}
+    <option value="{{ student.id }}">{{ student.name }}</option>
+    {% endfor %}
+  </select>
+  <input name="semester" placeholder="Semester" required />
+  <input name="subject" placeholder="Subject" required />
+  <input name="marks" type="number" placeholder="Marks" required />
+  <button type="submit">Submit</button>
+</form>
+<a href="/">Back</a>

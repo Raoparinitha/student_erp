@@ -1,0 +1,17 @@
+<h2>Mark Attendance</h2>
+<form method="POST">
+  <select name="student_id" required>
+    {% for student in students %}
+    <option value="{{ student.id }}">{{ student.name }}</option>
+    {% endfor %}
+  </select>
+  <input type="number" name="total_classes" placeholder="Total" required />
+  <input
+    type="number"
+    name="attended_classes"
+    placeholder="Attended"
+    required
+  />
+  <button type="submit">Submit</button>
+</form>
+<a href="/">Back</a>

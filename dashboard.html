@@ -1,0 +1,13 @@
+<h2>Teacher Dashboard</h2>
+{% for student in data %}
+<h3>{{ student.name }}</h3>
+<p>Attendance: {{ student.attendance }}</p>
+{% for sem, subjects in student.marks.items() %}
+<strong>Semester {{ sem }}:</strong>
+<ul>
+  {% for subject, mark in subjects %}
+  <li>{{ subject }}: {{ mark }}</li>
+  {% endfor %}
+</ul>
+{% endfor %} {% endfor %}
+<a href="/">Back</a>

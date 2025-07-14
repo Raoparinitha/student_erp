@@ -1,0 +1,12 @@
+<h2>Students</h2>
+<form method="POST" action="/add_student">
+  <input name="name" placeholder="Name" required />
+  <input name="parent_contact" placeholder="Parent Contact" required />
+  <button type="submit">Add Student</button>
+</form>
+<ul>
+  {% for student in students %}
+  <li>{{ student.name }} — Parent: {{ student.parent_contact }}</li>
+  {% endfor %}
+</ul>
+<a href="/">Back</a>
